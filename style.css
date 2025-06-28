@@ -1,0 +1,57 @@
+/* General body styles */
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+/* Header */
+h1 {
+  color: #00ffcc;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Links and buttons */
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Future buttons */
+.button {
+  background-color: #00ffcc;
+  color: #121212;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #00e6b8;
+}
