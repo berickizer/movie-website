@@ -29,14 +29,24 @@
     </a>
   </div>
 
-</body> </html>
+</body>
+<!-- Hamburger Menu Toggle -->
 <input type="checkbox" id="menu-toggle" style="display: none;">
-<label for="menu-toggle" style="position: fixed; top: 15px; left: 20px; z-index: 200; cursor: pointer;">
-  <div style="width: 30px; height: 4px; background-color: #00ffcc; margin: 6px 0; border-radius: 2px;"></div>
-  <div style="width: 30px; height: 4px; background-color: #00ffcc; margin: 6px 0; border-radius: 2px;"></div>
-  <div style="width: 30px; height: 4px; background-color: #00ffcc; margin: 6px 0; border-radius: 2px;"></div>
+
+<!-- Hamburger Icon -->
+<label for="menu-toggle" style="
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 200;
+  cursor: pointer;
+">
+  <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+  <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+  <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
 </label>
 
+<!-- Sidebar Menu -->
 <nav id="sidebar-menu" style="
   position: fixed;
   top: 0;
@@ -55,11 +65,12 @@
   <a href="#" style="display: block; color: #f0f0f0; text-decoration: none;">📺 TV Shows</a>
 </nav>
 
+<!-- Toggle Sidebar Open When Checked -->
 <style>
   #menu-toggle:checked + label + #sidebar-menu {
     transform: translateX(0);
   }
 </style>
 
-<!-- Spacer so the main content doesn't hide under menu -->
+<!-- Spacer -->
 <div style="height: 60px;"></div>
