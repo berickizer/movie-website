@@ -31,11 +31,24 @@
 
 </body>
 </html>
-<nav style="background-color: #1e1e1e; padding: 10px 20px; position: fixed; top: 0; left: 0; width: 100%; display: flex; gap: 20px; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index: 100;">
-  <a href="index.html" style="color: #00ffcc; text-decoration: none; font-weight: bold;">🏠 Home</a>
-  <a href="#" style="color: #f0f0f0; text-decoration: none;">🎬 Movies</a>
-  <a href="#" style="color: #f0f0f0; text-decoration: none;">📺 TV Shows</a>
+<input type="checkbox" id="menu-toggle" style="display: none;">
+<label for="menu-toggle" style="position: fixed; top: 15px; left: 20px; z-index: 200; cursor: pointer;">
+  <div style="width: 30px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+  <div style="width: 30px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+  <div style="width: 30px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+</label>
+
+<nav style="position: fixed; top: 0; left: -200px; width: 200px; height: 100%; background-color: #1e1e1e; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.5); transition: left 0.3s ease; z-index: 150;" id="sidebar">
+  <a href="index.html" style="display: block; color: #00ffcc; text-decoration: none; margin-bottom: 20px; font-weight: bold;">🏠 Home</a>
+  <a href="#" style="display: block; color: #f0f0f0; text-decoration: none; margin-bottom: 20px;">🎬 Movies</a>
+  <a href="#" style="display: block; color: #f0f0f0; text-decoration: none;">📺 TV Shows</a>
 </nav>
 
-<!-- Spacer to push content below nav -->
+<style>
+  #menu-toggle:checked ~ #sidebar {
+    left: 0;
+  }
+</style>
+
+<!-- Spacer to push content down -->
 <div style="height: 60px;"></div>
