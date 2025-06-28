@@ -29,26 +29,37 @@
     </a>
   </div>
 
-</body>
-</html>
+</body> </html>
 <input type="checkbox" id="menu-toggle" style="display: none;">
 <label for="menu-toggle" style="position: fixed; top: 15px; left: 20px; z-index: 200; cursor: pointer;">
-  <div style="width: 30px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
-  <div style="width: 30px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
-  <div style="width: 30px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+  <div style="width: 30px; height: 4px; background-color: #00ffcc; margin: 6px 0; border-radius: 2px;"></div>
+  <div style="width: 30px; height: 4px; background-color: #00ffcc; margin: 6px 0; border-radius: 2px;"></div>
+  <div style="width: 30px; height: 4px; background-color: #00ffcc; margin: 6px 0; border-radius: 2px;"></div>
 </label>
 
-<nav style="position: fixed; top: 0; left: -200px; width: 200px; height: 100%; background-color: #1e1e1e; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.5); transition: left 0.3s ease; z-index: 150;" id="sidebar">
-  <a href="index.html" style="display: block; color: #00ffcc; text-decoration: none; margin-bottom: 20px; font-weight: bold;">🏠 Home</a>
+<nav id="sidebar-menu" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  background-color: #1e1e1e;
+  padding: 60px 20px 20px 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 150;
+">
+  <a href="index.html" style="display: block; color: #00ffcc; font-weight: bold; text-decoration: none; margin-bottom: 20px;">🏠 Home</a>
   <a href="#" style="display: block; color: #f0f0f0; text-decoration: none; margin-bottom: 20px;">🎬 Movies</a>
   <a href="#" style="display: block; color: #f0f0f0; text-decoration: none;">📺 TV Shows</a>
 </nav>
 
 <style>
-  #menu-toggle:checked ~ #sidebar {
-    left: 0;
+  #menu-toggle:checked + label + #sidebar-menu {
+    transform: translateX(0);
   }
 </style>
 
-<!-- Spacer to push content down -->
+<!-- Spacer so the main content doesn't hide under menu -->
 <div style="height: 60px;"></div>
