@@ -4,121 +4,112 @@
   <title>TV Shows - Fakira Movie Zone</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TV show reviews from Fakira Movie Zone including Rick and Morty, Squid Game, and Agatha All Along.">
+  <meta name="keywords" content="TV shows, reviews, Rick and Morty, Squid Game, Agatha All Along, Fakira Movie Zone">
+  <meta name="author" content="Jash / Fakira Movie Zone">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .top-nav {
+      background-color: #1e1e1e;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .top-nav a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    h2.section-title {
+      color: #00ffcc;
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    @media (min-width: 768px) {
+      .review-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .review-card {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .review-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .review-card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
 <body>
-  <div style="background-color: #1e1e1e; padding: 15px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
-    <a href="index.html" style="display: inline-block; margin: 0 15px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">🏠 Home</a>
-    <a href="#" style="display: inline-block; margin: 0 15px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">🎬 Movies</a>
-    <a href="tvshows.html" style="display: inline-block; margin: 0 15px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">📺 TV Shows</a>
+
+  <!-- Navigation -->
+  <div class="top-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="#">🎬 Movies</a>
+    <a href="tvshows.html">📺 TV Shows</a>
   </div>
 
-  <h1 style="text-align:center; margin-top: 30px; color: #00ffcc;">📺 TV Shows</h1>
+  <!-- Title -->
+  <h2 class="section-title">TV Show Reviews</h2>
 
-  <div style="max-width: 800px; margin: auto; padding: 20px;">
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px; margin-bottom:30px;">
-      <h2 style="color: #00ffcc;">Rick and Morty</h2>
-      <img src="images/posters/rick-and-morty-wallpaper.jpg" alt="Rick and Morty" style="width:100%; border-radius: 10px; margin-bottom: 15px;">
-      <p>A sci-fi animated series following a genius scientist and his easily influenced grandson across the multiverse. Expect chaos, philosophy, and dark humor.</p>
+  <!-- Review Cards -->
+  <div class="review-grid">
+
+    <!-- Rick and Morty -->
+    <div class="review-card">
+      <h3 style="color: #00ffcc;">🧪 Rick and Morty</h3>
+      <img src="images/posters/rick-and-morty-wallpaper.jpg" alt="Rick and Morty">
+      <p><strong>Review:</strong> A chaotic mix of sci-fi, dark humor, and wild interdimensional adventures. Brilliant writing meets absolute madness — not for the faint of brain.</p>
+      <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
+      <a href="https://m.imdb.com/title/tt2861424/review/rw10189065/?ref_=ext_shr_lnk" target="_blank">Read Full Review on IMDb</a>
     </div>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>TV Shows - Fakira Movie Zone</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <div style="background-color: #1e1e1e; padding: 15px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
-    <a href="index.html" style="display: inline-block; margin: 0 15px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">🏠 Home</a>
-    <a href="#" style="display: inline-block; margin: 0 15px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">🎬 Movies</a>
-    <a href="tvshows.html" style="display: inline-block; margin: 0 15px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">📺 TV Shows</a>
+    <!-- Squid Game -->
+    <div class="review-card">
+      <h3 style="color: #00ffcc;">🦑 Squid Game</h3>
+      <img src="images/posters/MOVIE-POSTER-by-@mizuriau-on-www.instagram.com_.jpeg" alt="Squid Game">
+      <p><strong>Review:</strong> A brutal survival drama that captures desperation, class divide, and psychological breakdowns. Season 1 delivered high stakes; Season 2 expanded the game.</p>
+      <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
+      <a href="https://www.imdb.com/title/tt10919420/review/rw10227291/?ref_=ext_shr_lnk" target="_blank">Read Full Review on IMDb</a>
+    </div>
+
+    <!-- Agatha All Along -->
+    <div class="review-card">
+      <h3 style="color: #00ffcc;">🧙 Agatha All Along</h3>
+      <img src="images/posters/agatha.webp" alt="Agatha All Along">
+      <p><strong>Review:</strong> Visually stylish but underwhelming. Lacked depth, weak character moments, and failed to deliver on its potential. A spin-off that didn’t quite cast a spell on me.</p>
+      <p><strong>Rating:</strong> ⭐⭐★☆☆ (3/10)</p>
+      <a href="https://www.imdb.com/title/tt15571732/review/rw10119962/?ref_=ext_shr_lnk" target="_blank">Read Full Review on IMDb</a>
+    </div>
+
   </div>
 
-  <h1 style="text-align:center; margin-top: 30px; color: #00ffcc;">📺 Rick and Morty - Season Guide</h1>
-
-  <div style="max-width: 800px; margin: auto; padding: 20px;">
-    <img src="images/posters/rick-and-morty-wallpaper.jpg" alt="Rick and Morty" style="width:100%; border-radius: 10px; margin-bottom: 25px;">
-
-    <!-- Season Summaries -->
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px; margin-bottom:20px;">
-      <h2 style="color: #00ffcc;">Season 1</h2>
-      <p>The show kicks off with wacky adventures as Rick drags Morty into dimension-hopping chaos. Highlights include the pilot and "Rick Potion #9".</p>
-    </div>
-
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px; margin-bottom:20px;">
-      <h2 style="color: #00ffcc;">Season 2</h2>
-      <p>More dark and mind-bending escapades. Standout episodes include "Total Rickall" and "The Ricks Must Be Crazy".</p>
-    </div>
-
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px; margin-bottom:20px;">
-      <h2 style="color: #00ffcc;">Season 3</h2>
-      <p>Starts with a bang in "The Rickshank Rickdemption". The season dives deeper into Rick’s backstory and themes of nihilism.</p>
-    </div>
-
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px; margin-bottom:20px;">
-      <h2 style="color: #00ffcc;">Season 4</h2>
-      <p>Continues with sharp humor and episodes like "Rattlestar Ricklactica". Builds on the growing complexities of each character.</p>
-    </div>
-
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px; margin-bottom:20px;">
-      <h2 style="color: #00ffcc;">Season 5</h2>
-      <p>Rick battles himself (literally), and the season toys with meta-humor. “Mortyplicity” and “Rickternal Friendshine of the Spotless Mort” shine.</p>
-    </div>
-
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px; margin-bottom:20px;">
-      <h2 style="color: #00ffcc;">Season 6</h2>
-      <p>High-stakes drama meets philosophical exploration. Evil Morty reappears, and things get very real in "Night Family".</p>
-    </div>
-
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px; margin-bottom:20px;">
-      <h2 style="color: #00ffcc;">Season 7</h2>
-      <p>The shift in voice cast doesn’t slow the momentum. Strong character development with episodes like “Wet Kuat Amortycan Summer.”</p>
-    </div>
-
-    <div style="background-color:#1e1e1e; padding:20px; border-radius:10px;">
-      <h2 style="color: #00ffcc;">Season 8</h2>
-      <p>Season 8 brings new timelines, alternate realities, and ties up long-running plots. It’s cerebral, emotional, and very Rick.</p>
-    </div>
-  </div>
 </body>
 </html>
- 
-<hr style="margin: 40px 0;">
-
-<div style="max-width: 600px; margin: auto; background-color: #1e1e1e; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-  <h2 style="color: #00ffcc;">🦑 Squid Game (TV Series)</h2>
-
-  <img src="images/posters/squidgame-poster1.jpg" alt="Squid Game Poster 1" style="width:100%; border-radius: 10px; margin-bottom: 15px;">
-  <img src="images/posters/squidgame-poster2.jpg" alt="Squid Game Poster 2" style="width:100%; border-radius: 10px; margin-bottom: 15px;">
-
-  <p><strong>Overview:</strong> A deadly competition where 456 players battle it out in twisted children's games for a huge cash prize — with fatal consequences. It blends social commentary, psychological thrills, and sharp visuals.</p>
-
-  <p><strong>Season 1:</strong> Introduced the shocking concept, intense mind games, and unforgettable characters like Gi-hun, Sang-woo, and the Front Man. The Red Light-Green Light scene became iconic.</p>
-
-  <p><strong>Season 2:</strong> Continues Gi-hun’s quest for justice. Expect deeper mysteries, new games, and more about the organization behind the deadly tournament.</p>
-
-  <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
-
-  <a href="https://www.imdb.com/title/tt10919420/review/rw10227291/?ref_=ext_shr_lnk" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 25px; font-weight: bold; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);">
-    Read Full Review on IMDb
-  </a>
-</div>
-<hr style="margin: 40px 0;">
-
-<div style="max-width: 600px; margin: auto; background-color: #1e1e1e; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-  <h2 style="color: #00ffcc;">🧙 Agatha All Along (TV Series)</h2>
-
-  <img src="images/posters/agatha.webp" alt="Agatha All Along" style="width:100%; border-radius: 10px; margin-bottom: 15px;">
-
-  <p><strong>Review:</strong> Visually stylish but underwhelming. Lacked depth, weak character moments, and failed to deliver on its potential. A spin-off that didn’t quite cast a spell on me.</p>
-
-  <p><strong>Rating:</strong> ⭐⭐★☆☆ (3/10)</p>
-
-  <a href="https://www.imdb.com/title/tt15571732/review/rw10119962/?ref_=ext_shr_lnk" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 25px; font-weight: bold; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);">
-    Read Full Review on IMDb
-  </a>
-</div>
