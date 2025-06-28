@@ -8,8 +8,33 @@
   <meta name="keywords" content="movie reviews, Rick and Morty review, Inception, sci-fi shows, best movies 2024, Fakira Movie Zone, berickizer">
   <meta name="author" content="Jash / Fakira Movie Zone">
   <link rel="stylesheet" href="style.css">
+  <style>
+    #menu-toggle:checked + label + #sidebar-menu {
+      transform: translateX(0);
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Hamburger Menu Toggle -->
+  <input type="checkbox" id="menu-toggle" style="display: none;">
+  <label for="menu-toggle" style="position: fixed; top: 20px; left: 20px; z-index: 200; cursor: pointer;">
+    <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+    <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+    <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
+  </label>
+
+  <!-- Sidebar Menu -->
+  <nav id="sidebar-menu" style="position: fixed; top: 0; left: 0; height: 100%; width: 220px; background-color: #1e1e1e; padding: 60px 20px 20px 20px; box-shadow: 2px 0 10px rgba(0,0,0,0.4); transform: translateX(-100%); transition: transform 0.3s ease; z-index: 150;">
+    <a href="index.html" style="display: block; color: #00ffcc; font-weight: bold; text-decoration: none; margin-bottom: 20px;">🏠 Home</a>
+    <a href="#" style="display: block; color: #f0f0f0; text-decoration: none; margin-bottom: 20px;">🎬 Movies</a>
+    <a href="#" style="display: block; color: #f0f0f0; text-decoration: none;">📺 TV Shows</a>
+  </nav>
+
+  <!-- Spacer -->
+  <div style="height: 60px;"></div>
+
+  <!-- Site Content -->
   <h1>Welcome to My Movie Blog</h1>
 
   <img src="images/banner.png" alt="Banner" style="width:100%; max-width:600px; border-radius:10px; margin-top:20px;">
@@ -30,47 +55,4 @@
   </div>
 
 </body>
-<!-- Hamburger Menu Toggle -->
-<input type="checkbox" id="menu-toggle" style="display: none;">
-
-<!-- Hamburger Icon -->
-<label for="menu-toggle" style="
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 200;
-  cursor: pointer;
-">
-  <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
-  <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
-  <div style="width: 28px; height: 3px; background-color: #00ffcc; margin: 6px 0;"></div>
-</label>
-
-<!-- Sidebar Menu -->
-<nav id="sidebar-menu" style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 220px;
-  background-color: #1e1e1e;
-  padding: 60px 20px 20px 20px;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.4);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 150;
-">
-  <a href="index.html" style="display: block; color: #00ffcc; font-weight: bold; text-decoration: none; margin-bottom: 20px;">🏠 Home</a>
-  <a href="#" style="display: block; color: #f0f0f0; text-decoration: none; margin-bottom: 20px;">🎬 Movies</a>
-  <a href="#" style="display: block; color: #f0f0f0; text-decoration: none;">📺 TV Shows</a>
-</nav>
-
-<!-- Toggle Sidebar Open When Checked -->
-<style>
-  #menu-toggle:checked + label + #sidebar-menu {
-    transform: translateX(0);
-  }
-</style>
-
-<!-- Spacer -->
-<div style="height: 60px;"></div>
+</html>
