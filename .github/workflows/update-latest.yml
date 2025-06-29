@@ -1,0 +1,33 @@
+name: Update Latest Content
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # runs every day at midnight UTC
+  workflow_dispatch:     # allows manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run latest.js
+        run: node latest.js
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add latest.html
+          git commit -m "🤖 Auto-update latest content"
+          git push
