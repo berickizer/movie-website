@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latest - Fakira Movie Zone</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Check out the latest movie and TV show releases, fetched from TMDb API and updated live on Fakira Movie Zone.">
+  <meta name="keywords" content="latest movies, new tv shows, TMDb, Fakira Movie Zone, now playing, trending">
+  <meta name="author" content="Jash / Fakira Movie Zone">
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #121212; color: white; font-family: Arial, sans-serif;">
+
+  <!-- Top Navigation -->
+  <div style="background-color: #1e1e1e; padding: 15px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
+    <a href="index.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">🏠 Home</a>
+    <a href="movies.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">🎬 Movies</a>
+    <a href="tvshows.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">📺 TV Shows</a>
+    <a href="latest.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #00ffcc; color: #121212; text-decoration: none; border-radius: 20px; font-weight: bold;">🆕 Latest</a>
+  </div>
+
+  <h1 style="text-align: center; margin: 40px 0; color: #00ffcc;">🆕 Latest Releases</h1>
+
+  <div id="latest-container" style="max-width: 900px; margin: auto; display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px;">
+    <!-- JavaScript will load movie data here -->
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const API_KEY = 'df028524da0623bdda47c7fd0504b092';
+    const container = document.getElementById('latest-container');
+
+    fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`)
+      .then(res => res.json())
+      .then(data => {
+        data.results.slice(0, 10).forEach(item => {
+          const title = item.title || item.name;
+          const imageUrl = item.poster_path 
+            ? `https://image.tmdb.org/t/p/w500${item.poster_path}` 
+            : 'images/banner.png';
+
+          const div = document.createElement('div');
+          div.style.backgroundColor = '#1e1e1e';
+          div.style.padding = '15px';
+          div.style.borderRadius = '10px';
+          div.style.boxShadow = '0 4px 12px rgba(0,0,0,0.5)';
+
+          div.innerHTML = `
+            <img src="${imageUrl}" alt="${title}" style="width:100%; border-radius: 10px; margin-bottom: 10px;">
+            <h3 style="color: #00ffcc;">${title}</h3>
+            <p><strong>Type:</strong> ${item.media_type.toUpperCase()}</p>
+            <p><strong>Overview:</strong> ${item.overview || 'No description available.'}</p>
+          `;
+
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        container.innerHTML = "<p style='text-align: center;'>Failed to load latest content. Please try again later.</p>";
+        console.error(err);
+      });
+  </script>
+
+</body>
+</html>
