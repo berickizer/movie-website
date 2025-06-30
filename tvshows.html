@@ -75,16 +75,29 @@
       border-radius: 10px;
       margin-bottom: 15px;
     }
-    .review-card a {
-      display: inline-block;
+    /* Buttons container */
+    .button-container {
       margin-top: 15px;
-      padding: 10px 20px;
+      text-align: center;
+    }
+    /* Buttons */
+    .button {
       background-color: #00ffcc;
       color: #121212;
       text-decoration: none;
       border-radius: 25px;
       font-weight: bold;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      padding: 10px 20px;
+      display: inline-block;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .button-spacing {
+      margin-right: 25px; /* space between buttons */
+    }
+    .button:hover {
+      background-color: #00e6b8;
     }
   </style>
 </head>
@@ -106,42 +119,42 @@
   <div class="review-grid">
 
     <!-- Squid Game -->
-<div class="review-card">
-  <h3 style="color: #00ffcc;">🦑 Squid Game</h3>
-  <img src="images/posters/squidgame-poster1.jpg" alt="Squid Game Poster">
-  <p><strong>Review:</strong> A dark survival drama where players risk their lives in deadly versions of children's games for a massive cash prize. Brutal, intense, and layered with social commentary.</p>
-  <p><strong>Rating:</strong> ⭐⭐⭐⭐½ (4.5/5)</p>
+    <div class="review-card">
+      <h3 style="color: #00ffcc;">🦑 Squid Game</h3>
+      <img src="images/posters/squidgame-poster1.jpg" alt="Squid Game Poster">
+      <p><strong>Review:</strong> A dark survival drama where players risk their lives in deadly versions of children's games for a massive cash prize. Brutal, intense, and layered with social commentary.</p>
+      <p><strong>Rating:</strong> ⭐⭐⭐⭐½ (4.5/5)</p>
+      <div class="button-container">
+        <a href="https://www.google.com/search?q=Squid+Game+TV+Show" target="_blank" class="button button-spacing">More Info 🔍</a>
+        <a href="https://m.imdb.com/title/tt10919420/review/rw10227291/?ref_=ext_shr_lnk" target="_blank" class="button">Read IMDb Review</a>
+      </div>
+    </div>
 
-  <a href="https://www.google.com/search?q=Squid+Game+TV+Show" target="_blank">More Info 🔍</a>
-  <a href="https://m.imdb.com/title/tt10919420/review/rw10227291/?ref_=ext_shr_lnk" target="_blank">Read IMDb Review</a>
-</div>
+    <!-- Agatha All Along -->
+    <div class="review-card">
+      <h3 style="color: #00ffcc;">🧙‍♀️ Agatha All Along</h3>
+      <img src="images/posters/agatha.webp" alt="Agatha All Along Poster">
+      <p><strong>Review:</strong> A magical spin-off from WandaVision centered around the mischievous witch Agatha Harkness. Expect witchcraft, Marvel Easter eggs, and twisted sorcery in this enchanting dark comedy.</p>
+      <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
+      <div class="button-container">
+        <a href="https://www.google.com/search?q=Agatha+All+Along+TV+Show" target="_blank" class="button button-spacing">More Info 🔍</a>
+        <a href="https://m.imdb.com/title/tt15571732/review/rw10119962/?ref_=ext_shr_lnk" target="_blank" class="button">Read IMDb Review</a>
+      </div>
+    </div>
 
-   
-   <!-- Agatha All Along -->
-<div class="review-card">
-  <h3 style="color: #00ffcc;">🧙‍♀️ Agatha All Along</h3>
-  <img src="images/posters/agatha.webp" alt="Agatha All Along Poster">
-  <p><strong>Review:</strong> A magical spin-off from WandaVision centered around the mischievous witch Agatha Harkness. Expect witchcraft, Marvel Easter eggs, and twisted sorcery in this enchanting dark comedy.</p>
-  <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
+    <!-- Rick and Morty -->
+    <div class="review-card">
+      <h3 style="color: #00ffcc;">🧪 Rick and Morty</h3>
+      <img src="images/posters/rick-and-morty-wallpaper.jpg" alt="Rick and Morty Poster">
+      <p><strong>Review:</strong> A chaotic mix of sci-fi, dark humor, and wild interdimensional adventures. Brilliant writing meets absolute madness — not for the faint of brain.</p>
+      <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
+      <div class="button-container">
+        <a href="https://www.google.com/search?q=Rick+and+Morty+TV+Show" target="_blank" class="button button-spacing">More Info 🔍</a>
+        <a href="https://m.imdb.com/title/tt2861424/review/rw10189065/?ref_=ext_shr_lnk" target="_blank" class="button">Read IMDb Review</a>
+      </div>
+    </div>
 
-  <a href="https://www.google.com/search?q=Agatha+All+Along+TV+Show" target="_blank">More Info 🔍</a>
-  <a href="https://m.imdb.com/title/tt15571732/review/rw10119962/?ref_=ext_shr_lnk" target="_blank">Read IMDb Review</a>
-</div>
-
-
-   <!-- Rick and Morty -->
-<div class="review-card">
-  <h3 style="color: #00ffcc;">🧪 Rick and Morty</h3>
-  <img src="images/posters/rick-and-morty-wallpaper.jpg" alt="Rick and Morty Poster">
-  <p><strong>Review:</strong> A chaotic mix of sci-fi, dark humor, and wild interdimensional adventures. Brilliant writing meets absolute madness — not for the faint of brain.</p>
-  <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
-
-  <a href="https://www.google.com/search?q=Rick+and+Morty+TV+Show" target="_blank">More Info 🔍</a>
-  <a href="https://m.imdb.com/title/tt2861424/review/rw10189065/?ref_=ext_shr_lnk" target="_blank">Read IMDb Review</a>
-</div>
-
-     
- </div>
+  </div>
 
 </body>
 </html>
