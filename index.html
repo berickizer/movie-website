@@ -28,13 +28,34 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Fix Button Styling -->
   <style>
+    /* Top Navigation */
+    .top-nav {
+      background-color: #1e1e1e;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .top-nav a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* Section Title */
     .section-title {
       color: #00ffcc;
       text-align: center;
       margin: 40px 0 20px;
     }
+
+    /* Review Grid and Cards */
     .review-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -77,12 +98,12 @@
 <body>
 
   <!-- Top Navigation -->
-  <div style="background-color: #1e1e1e; padding: 15px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">
-    <a href="/movie-website/index.html" style="...">🏠 Home</a>
-    <a href="/movie-website/movies.html" style="...">🎬 Movies</a>
-    <a href="/movie-website/tvshows.html" style="...">📺 TV Shows</a>
-    <a href="/movie-website/latest.html" style="...">🆕 Latest</a>
-    <a href="disclaimer.html" style="...">⚖️ Disclaimer</a>
+  <div class="top-nav">
+    <a href="/movie-website/index.html">🏠 Home</a>
+    <a href="/movie-website/movies.html">🎬 Movies</a>
+    <a href="/movie-website/tvshows.html">📺 TV Shows</a>
+    <a href="/movie-website/latest.html">🆕 Latest</a>
+    <a href="disclaimer.html">⚖️ Disclaimer</a>
   </div>
 
   <h1 style="text-align: center; margin-top: 30px;">Welcome to Fakira Movie Zone</h1>
@@ -95,7 +116,6 @@
   <!-- Featured Reviews Section -->
   <h2 class="section-title">🌟 Featured Review</h2>
   <div class="review-grid">
-
     <!-- Featured: Rick and Morty -->
     <div class="review-card">
       <h3 style="color: #00ffcc;">🧪 Rick and Morty</h3>
@@ -105,7 +125,6 @@
       <a href="https://www.google.com/search?q=Rick+and+Morty+TV+Show" target="_blank">More Info 🔍</a>
       <a href="https://m.imdb.com/title/tt2861424/review/rw10189065/?ref_=ext_shr_lnk" target="_blank">Read IMDb Review</a>
     </div>
-
   </div>
 
 </body>
