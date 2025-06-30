@@ -66,3 +66,12 @@ a:hover {
   background-color: #00e6b8;
   text-decoration: none;
 }
+
+/* Special spacing just for buttons in movies.html */
+.movies-page .button {
+  margin-right: 25px;
+}
+
+.movies-page .button:last-child {
+  margin-right: 0;
+}
