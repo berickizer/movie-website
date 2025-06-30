@@ -1,10 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime
 
-IMDB_USER_ID = "ur188754091"  # Your IMDb user ID
+IMDB_USER_ID = "ur188754091"
 IMDB_URL = f"https://m.imdb.com/user/{IMDB_USER_ID}/ratings"
-
 OUTPUT_FILE = "recommendations.html"
 
 def fetch_recommendations():
@@ -14,7 +12,6 @@ def fetch_recommendations():
 
     soup = BeautifulSoup(response.text, "html.parser")
     items = soup.select("div.col-title")[:6]  # Top 6 rated titles
-
     reviews_html = ""
 
     for item in items:
@@ -25,8 +22,6 @@ def fetch_recommendations():
         title = title_tag.text.strip()
         href = title_tag["href"]
         imdb_link = "https://www.imdb.com" + href
-
-        # Poster fallback if not found
         poster = "https://via.placeholder.com/400x600?text=No+Image"
 
         rating_tag = item.find_next("span", class_="rating-rating")
@@ -64,15 +59,13 @@ def fetch_recommendations():
   </div>
 
   <h2 class="section-title">🤖 Recommended by Fakira</h2>
-  <p style="text-align:center;">Auto-updated from <a href="https://www.imdb.com/user/{IMDB_USER_ID}/" target="_blank">IMDb profile</a> daily. Handpicked and rated by Jash.</p>
+  <p style="text-align:center;">Auto-updated from <a href="https://www.imdb.com/user/{IMDB_USER_ID}/" target="_blank">IMDb profile</a> daily. Handpicked and rated by Fakira.</p>
 
   <div class="review-grid">
     {reviews_html}
   </div>
-
 </body>
-</html>
-""")
+</html>""")
 
 if __name__ == "__main__":
     fetch_recommendations()
