@@ -6,12 +6,16 @@ IMDB_URL = f"https://m.imdb.com/user/{IMDB_USER_ID}/ratings"
 OUTPUT_FILE = "recommendations.html"
 
 def fetch_recommendations():
-    response = requests.get(IMDB_URL)
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+    }
+    response = requests.get(IMDB_URL, headers=headers)
     if response.status_code != 200:
         raise Exception("Failed to fetch IMDb page")
 
     soup = BeautifulSoup(response.text, "html.parser")
     items = soup.select("div.col-title")[:6]  # Top 6 rated titles
+
     reviews_html = ""
 
     for item in items:
@@ -64,8 +68,10 @@ def fetch_recommendations():
   <div class="review-grid">
     {reviews_html}
   </div>
+
 </body>
-</html>""")
+</html>
+""")
 
 if __name__ == "__main__":
     fetch_recommendations()
