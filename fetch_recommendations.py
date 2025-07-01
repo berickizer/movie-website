@@ -9,7 +9,7 @@ def fetch_rated_titles():
     items = soup.select("section div div.ipc-title a")
 
     cards = ""
-    for item in items[:5]:  # Show only top 5
+    for item in items[:15]:  # Show only top 15
         title = item.text.strip()
         link = "https://www.imdb.com" + item.get("href")
         cards += f"""
@@ -21,7 +21,7 @@ def fetch_rated_titles():
     return cards
 
 html_path = "recommendations.html"
-with open(html_path, "r") as f:
+with open(html_path, "r", encoding="utf-8") as f:
     content = f.read()
 
 start = content.find('<div id="recommendations">')
@@ -29,5 +29,5 @@ end = content.find('</div>', start) + 6
 
 updated_html = content[:start] + '<div id="recommendations">\n' + fetch_rated_titles() + '\n</div>' + content[end:]
 
-with open(html_path, "w") as f:
+with open(html_path, "w", encoding="utf-8") as f:
     f.write(updated_html)
