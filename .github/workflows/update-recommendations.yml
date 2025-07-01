@@ -15,7 +15,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"  # ✅ fixed here
+          python-version: "3.10"
 
       - name: Install dependencies
         run: pip install requests beautifulsoup4
@@ -28,5 +28,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add recommendations.html
-          git commit -m "🤖 Auto-update IMDb recommendations"
-          git push
+          git commit -m "🤖 Auto-update IMDb recommendations" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/berickizer/movie-website.git HEAD:main
